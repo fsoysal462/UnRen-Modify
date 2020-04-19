@@ -28,7 +28,6 @@ import itertools
 import traceback
 import struct
 
-from multiprocessing import Pool, Lock, cpu_count
 from operator import itemgetter
 
 import decompiler
