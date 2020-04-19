@@ -68,9 +68,9 @@ class_factory = magic.FakeClassFactory((PyExpr, PyCode, RevertableList, Revertab
 def read_ast_from_file(in_file):
     # .rpyc files are just zlib compressed pickles of a tuple of some data and the actual AST of the file
     raw_contents = in_file.read()
-    if raw_contents.startswith("KARAKTER"):
+    if raw_contents.startswith("RENPY RPC2-MATT"):
         # parse the archive structure
-        position = KARAKTER SAYISI
+        position = 15
         chunks = {}
         while True:
             slot, start, length = struct.unpack("III", raw_contents[position: position + 12])
